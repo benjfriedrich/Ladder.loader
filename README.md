@@ -18,7 +18,7 @@ It requires you to properly format the relevant \<img\> tags in the site's raw H
 <img class="first-tier" data-llsrc="/images/fullImage.jpg" src="/images/tempLoading.svg">
 ```
 
-Also, you'll need to import the ladderLoader.js in your header or footer. You can host the file yourself, or pull from a CDN.
+**Also, you'll need to import the ladderLoader.js in your header or footer.** You can host the file yourself, or pull from a CDN.
 
 *example using the jsDelivr CDN:*
 ```HTML
