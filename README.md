@@ -2,7 +2,7 @@
 
 Ladder.loader() is a simple non-blocking image loading function for static-style sites that runs on the client browser and loads images one at time, but in tiers. 
 
-That means the images in the first tier will load, one-by-one, top-to-bottom, before the second tier starts to load. This apporach provides a progressive loading experience that lets you set priorities, while keeping it simple. 
+That means the images in the first tier will load, one-by-one, top-to-bottom, before the second tier starts to load. This approach provides a progressive loading experience that lets you set priorities, while keeping it simple. 
 
 It requires you to properly format the relevant \<img\> tags in the site's raw HTML, and call Ladder.loader() using JavaScript in the browser.
 
@@ -37,7 +37,7 @@ It requires you to properly format the relevant \<img\> tags in the site's raw H
 ['first-tier','llsrc'] 
 ```
 
-**2)** pass as many of these arugments into Ladder.loader() as you want, in the order that you want them loaded,
+**2)** pass as many of these arguments into Ladder.loader() as you want, in the order that you want them loaded,
 
 *example:* 
 ```javascript 
