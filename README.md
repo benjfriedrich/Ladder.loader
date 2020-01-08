@@ -4,7 +4,7 @@ Ladder.loader() is a simple non-blocking image loading function for static-style
 
 That means the images in the first tier of images will load, one-by-one, top to bottom, before the second tier starts to load. This apporach provides a progressive loading experience that lets you set priorities, while keeping it simple. 
 
-It requires you to properly format the relevant <img> tags in the site's raw HTML, and call Ladder.loader() in using JavaScript in the browser.
+It requires you to properly format the relevant \<img\> tags in the site's raw HTML, and call Ladder.loader() in using JavaScript in the browser.
 
 **In HTML:**
 
