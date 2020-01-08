@@ -20,11 +20,11 @@ It requires you to properly format the relevant \<img\> tags in the site's raw H
 
 Also, you'll need to import the ladderLoader.js in your header or footer. You can host the file yourself, or pull from a CDN.
 
-*example:*
+*example using the jsDelivr CDN:*
 ```HTML
 
 <footer>
-<script type="text/javascript" src="script/ladderLoader.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/benjfriedrich/ladderLoader.js@1.0/ladderLoader.min.js"></script>
 </footer>
 ```
 
