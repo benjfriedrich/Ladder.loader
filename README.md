@@ -30,7 +30,7 @@ Also, you'll need to import the ladderLoader.js in your header or footer. You ca
 
 **In JavaScript:**
 
-**1)** Define a tier using a 2-element array of stings containing **a)** the tier's class, and **b)** the relevant url data-attribute (note: don't include 'data-' in the string),
+**1)** Define a tier using a 2-element array of stings containing **a)** the tier's class, and **b)** the relevant data-attribute, **or** pass in the tier's class as a string and 'llsrc' will be used as the default data-attribute.
 
 *example:* 
 ```javascript 
