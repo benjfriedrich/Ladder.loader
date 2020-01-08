@@ -8,7 +8,7 @@ It requires you to properly format the relevant \<img\> tags in the site's raw H
 
 **In HTML:**
 
-**1)** Assign your <img> tags to tiers by class,
+**1)** Assign your \<img\> tags to tiers by class,
 **2)** assign the actual link to a data slot,
 **3)** & fill the src with a temporary image. 
 
@@ -16,6 +16,16 @@ It requires you to properly format the relevant \<img\> tags in the site's raw H
 	
 ```HTML
 <img class="first-tier" data-llsrc="/images/fullImage.jpg" src="/images/tempLoading.svg">
+```
+
+Also, you'll need to import the ladderLoader.js in your your header or footer. You can host the file yourself, or pull from a CDN.
+
+*example:*
+```HTML
+
+<footer>
+<script type="text/javascript" src="script/ladderLoader.js"></script>
+</footer>
 ```
 
 **In JavaScript:**
