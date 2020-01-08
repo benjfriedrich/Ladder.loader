@@ -63,17 +63,19 @@ class Ladder {
 
 		const arrayify = x => Array.prototype.slice.call(x);
 
-		const validate = (x) => x.filter((x) => x[0] != null && x[1] != null )
+		const format = (x) => x.map((x) => Array.isArray(x) && x.length == 2 ? x : Array.isArray(x) && x.length == 1 ? [x[0],'llsrc'] : [x,'llsrc'] );
 
 		const retrieveClass = className => arrayify(document.getElementsByClassName(className));
 
-		const bundle = (elements, source) => elements.map( element => [element, source]);
+		const stripData = (x) => x.slice(0,5) == 'data-' ? x.slice(5) : x;
+
+		const bundle = (elements, source) => elements.map( element => [element, stripData(source)]);
 
 		const processTier = tier => bundle(retrieveClass(tier[0]), tier[1]);
 
 		const process = x => x.map(tier => processTier(tier)).flat();
 
-		const imageList = process(validate(arrayify(arguments)));
+		const imageList = process(format(arrayify(arguments)));
 		
 		const downloadIMG = (element, source) => {
 
