@@ -60,7 +60,8 @@ Remember you can pass functions that return strings as arguments. A common use f
 **In HTML:**
 
 ```HTML 
-<img class="first-tier" data-llsrcFull="/fullImage.jpg" data-llsrcMobile="/smallImage.jpg" src="/images/tempLoading.svg"> ```
+<img class="first-tier" data-llsrcFull="/fullImage.jpg" data-llsrcMobile="/smallImage.jpg" src="/images/tempLoading.svg"> 
+```
 
 **In JavaScript:**
 
