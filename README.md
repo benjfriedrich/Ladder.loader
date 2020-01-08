@@ -1,10 +1,10 @@
 # Ladder.loader()
 
-Ladder.loader() is a simple non-blocking image loading function for static-style sites that runs in the client browser and loads the images on a page one at time, but in tiers. 
+Ladder.loader() is a simple non-blocking image loading function for static-style sites that runs on the client browser and loads images one at time, but in tiers. 
 
-That means the images in the first tier of images will load, one-by-one, top to bottom, before the second tier starts to load. This apporach provides a progressive loading experience that lets you set priorities, while keeping it simple. 
+That means the images in the first tier of images will load, one-by-one, top-to-bottom, before the second tier starts to load. This apporach provides a progressive loading experience that lets you set priorities, while keeping it simple. 
 
-It requires you to properly format the relevant \<img\> tags in the site's raw HTML, and call Ladder.loader() in using JavaScript in the browser.
+It requires you to properly format the relevant \<img\> tags in the site's raw HTML, and call Ladder.loader() using JavaScript in the browser.
 
 **In HTML:**
 
@@ -20,7 +20,7 @@ It requires you to properly format the relevant \<img\> tags in the site's raw H
 
 **In JavaScript:**
 
-**1)** Define a tier using a 2-element array with the tier's class, and the relevant url data-attribute (note: don't include 'data-'),
+**1)** Define a tier using a 2-element array of stings containing the tier's class, and the relevant url data-attribute (note: don't include 'data-'),
 
 *example:* 
 ```javascript 
@@ -41,9 +41,9 @@ Ladder.loader(['first-tier','llsrc'],['second-tier','llsrc'],['third-tier','llsr
 Window.onload = Ladder.loader(['first-tier','llsrc'])
 ```
 
-## Pro-tip:
+## Pro-tips:
 
-Remember you can pass functions that return strings as arguments. The most common use for this would be to provide smaller versions of files to mobile devices.
+Remember you can pass functions that return strings as arguments. A common use for this would be to provide smaller versions of files to mobile devices.
 
 *Here's an example:*
 
@@ -59,3 +59,5 @@ const isMobile = () => window.innerWidth <= 800 ? "llsrcMobile" : "llsrcFull";
 Window.onload = Ladder.loader(['first-tier',isMobile()])
 
 ```
+
+Also, Window.onload is an obvious moment to run a Ladder.loader(), but you can trigger it any way you want, and you could also trigger multiple instances of the function based on different conditions. **It's a really simple function, so you can be creative with it.**
