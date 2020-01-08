@@ -2,7 +2,7 @@
 
 Ladder.loader() is a simple non-blocking image loading function for static-style sites that runs on the client browser and loads images one at time, but in tiers. 
 
-That means the images in the first tier of images will load, one-by-one, top-to-bottom, before the second tier starts to load. This apporach provides a progressive loading experience that lets you set priorities, while keeping it simple. 
+That means the images in the first tier will load, one-by-one, top-to-bottom, before the second tier starts to load. This apporach provides a progressive loading experience that lets you set priorities, while keeping it simple. 
 
 It requires you to properly format the relevant \<img\> tags in the site's raw HTML, and call Ladder.loader() using JavaScript in the browser.
 
@@ -18,7 +18,7 @@ It requires you to properly format the relevant \<img\> tags in the site's raw H
 <img class="first-tier" data-llsrc="/images/fullImage.jpg" src="/images/tempLoading.svg">
 ```
 
-Also, you'll need to import the ladderLoader.js in your your header or footer. You can host the file yourself, or pull from a CDN.
+Also, you'll need to import the ladderLoader.js in your header or footer. You can host the file yourself, or pull from a CDN.
 
 *example:*
 ```HTML
@@ -30,7 +30,7 @@ Also, you'll need to import the ladderLoader.js in your your header or footer. Y
 
 **In JavaScript:**
 
-**1)** Define a tier using a 2-element array of stings containing the tier's class, and the relevant url data-attribute (note: don't include 'data-'),
+**1)** Define a tier using a 2-element array of stings containing **a)** the tier's class, and **b)** the relevant url data-attribute (note: don't include 'data-' in the string),
 
 *example:* 
 ```javascript 
