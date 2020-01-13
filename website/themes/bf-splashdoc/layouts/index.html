@@ -1,0 +1,12 @@
+{{ define "title" }}{{ .Site.Title }}{{ end }}
+
+{{ define "main" -}}
+
+
+{{- partial "top-fold.html" . -}}
+<main>
+{{- partial "content.html" . -}}
+
+
+</main>
+{{ end }}
