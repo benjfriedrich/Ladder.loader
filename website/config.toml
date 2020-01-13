@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://ladderloader.dev/"
 languageCode = "en-us"
 title = "Ladder Loader"
 theme = "bf-splashdoc"
