@@ -6,11 +6,11 @@ That means the images in the first tier will load, one-by-one, top-to-bottom, an
 
 **That's why it's called Ladder.loader(). It's like a ladder, and it loads.**
 
-##How?
+## How?
 
 Using Ladder.loader() has 2 requirments: **1)** you'll need to properly format the relevant \<img\> tags in the site's raw HTML, and **2)** you'll need to call Ladder.loader() using JavaScript from the browser.
 
-###In HTML:
+### In HTML:
 
 **1)** Assign your \<img\> tags to tiers by class,
 **2)** assign the actual link to a data slot,
@@ -28,7 +28,7 @@ Using Ladder.loader() has 2 requirments: **1)** you'll need to properly format t
 </footer>
 ```
 
-###In JavaScript:
+### In JavaScript:
 
 **1)** Define a tier using a 2-element array of stings containing **a)** the tier's class, and **b)** the relevant data-attribute, **or** pass in the tier's class as a string and 'llsrc' will be used as the default data-attribute.
 
