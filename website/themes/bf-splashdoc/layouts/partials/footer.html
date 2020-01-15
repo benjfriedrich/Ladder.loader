@@ -4,4 +4,12 @@
 <p class="copyright">Last site build: {{ now.Format "Mon, 02 Jan 2006 15:04:05 MST" }} </p>
 {{ $script := resources.Get "js/prism.js" | resources.Minify }}
 <script type="text/javascript" src="{{ $script.Permalink }}"></script>
+
+{{ $script2 := resources.Get "js/anime.js" | resources.Minify }}
+<script type="text/javascript" src="{{ $script2.Permalink }}"></script>
+
+{{ $script3 := resources.Get "js/script.js" | resources.Minify }}
+<script type="text/javascript" src="{{ $script3.Permalink }}"></script>
+
+
 </footer>

@@ -39,13 +39,6 @@ background-color: $mainColor;
 
 #top-fold {
 
-	min-height: 92vh;
-
-@media screen and (min-width: $desktop-break) {
-
-	min-height: 0;		
-
-		}
 
 }
 
@@ -116,10 +109,16 @@ background-color: $mainColor;
 
 #download-links {
 
-	margin: 50px auto;
+	margin: 20px auto 30px;
 
 	display: flex;
 	justify-content: center;
+
+	@media screen and (min-width: $desktop-break) {
+	
+		margin: 35px auto 50px;		
+	
+	}
 }
 
 button,.bttn {
@@ -165,6 +164,39 @@ button,.bttn:hover {
 				
 	
 			}
+}
+
+#animations {
+	
+	display:grid;
+
+	
+	margin: 0 auto;
+
+	grid-template-columns: 1fr 1fr;
+
+	padding: 25px 25px 0;
+	grid-gap: 25px;
+
+
+	@media screen and (min-width: $desktop-break) {
+	
+
+		grid-template-columns: 1fr 1fr;
+			padding: 55px 25px 0;
+		max-width: 600px;
+
+				
+	
+			}
+
+}
+
+.frame {
+
+
+
+
 }
 
 main {
