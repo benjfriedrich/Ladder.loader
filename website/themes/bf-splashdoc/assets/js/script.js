@@ -10,18 +10,23 @@ function startAnimation() {
     { value: 1}
   ],
   delay: anime.stagger(101.5),
-  loop: true
+  loop: true,
+
+    loopBegin: () => startBatch()
 
 });
+
+
+
+}
+
+
+function startBatch() {
 
 var tl = anime.timeline({
 
-	loop: true
-
-
 });
 
-// Add children
 tl
 .add({
   targets: '.anmld2',
@@ -30,25 +35,34 @@ tl
 })
 .add({
   targets: '.anmld5',
-    duration: 800,
+    duration: 776,
   opacity: .5,
 })
 .add({
   targets: '.anmld4',  
-  duration: 800,
+  duration: 777,
   opacity: .5,
 })
 .add({
   targets: '.anmld3',
-  duration: 800,
+  duration: 777,
   opacity: .5,
 })
 .add({
   targets: '.anmld2',
   opacity: 1,
-  duration: 540,
+  duration: 570,
 })
-
+.add({
+  targets: '.anmld2',
+    duration: 1,
+  opacity: .2,
+})
+.add({
+  targets: ['.anmld5','.anmld4','.anmld3'],
+  opacity: 0,
+  duration: 1,
+})
 }
 
 
