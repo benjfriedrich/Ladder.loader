@@ -1,33 +1,9 @@
-const elements = document.querySelectorAll('.anmld1');
-
-
-function startAnimation() {
-	
-	anime({
-  targets: document.querySelectorAll('.anmld1'),
-  opacity: [
-    { value: 0},
-    { value: 1}
-  ],
-  delay: anime.stagger(101.5),
-  loop: true,
-
-    loopBegin: () => startBatch()
-
-});
-
-
-
-}
-
-
 function startBatch() {
+anime.timeline({
+	loop:true,
+	easing: 'steps(5)'
 
-var tl = anime.timeline({
-
-});
-
-tl
+})
 .add({
   targets: '.anmld2',
     duration: 500,
@@ -35,23 +11,29 @@ tl
 })
 .add({
   targets: '.anmld5',
-    duration: 776,
+    duration: 725,
   opacity: .5,
 })
 .add({
   targets: '.anmld4',  
-  duration: 777,
+  duration: 725,
   opacity: .5,
 })
 .add({
   targets: '.anmld3',
-  duration: 777,
+  duration: 725,
   opacity: .5,
 })
 .add({
   targets: '.anmld2',
   opacity: 1,
-  duration: 570,
+  duration: 725,
+})
+.add({
+  targets: '.anmld2',
+  opacity: 1,
+  duration: 600,
+  easing: 'steps(1)'
 })
 .add({
   targets: '.anmld2',
@@ -66,4 +48,15 @@ tl
 }
 
 
-startAnimation();
+startBatch();
+
+
+const ladderAnimation = (list) => list.reduce((chain, val) => chain.add({targets:val,opacity:1}), anime.timeline({duration:120, loop:true}).add({targets:'.anmld1', opacity: 0, duration:500 }));
+const arrayify = x => Array.prototype.slice.call(x);
+const elements = document.querySelectorAll('.anmld1');
+
+ladderAnimation(arrayify(elements))
+.add({targets:'.anmld1', duration: 500})
+.add({targets:'.anmld1',opacity:0,duration: 2});
+
+
