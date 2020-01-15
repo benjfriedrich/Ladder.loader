@@ -8,7 +8,7 @@ That means the images in the first tier will load, one-by-one, top-to-bottom, an
 
 ##How?
 
-Using Ladder.loader has 2 requirments: **1)** you'll need to properly format the relevant \<img\> tags in the site's raw HTML, and **2)** you'll need to call Ladder.loader() using JavaScript from the browser.
+Using Ladder.loader() has 2 requirments: **1)** you'll need to properly format the relevant \<img\> tags in the site's raw HTML, and **2)** you'll need to call Ladder.loader() using JavaScript from the browser.
 
 ###In HTML:
 
