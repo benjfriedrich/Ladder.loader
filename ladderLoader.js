@@ -1,8 +1,8 @@
 
 /*/ 
+Distributed with an MIT license.
 
 Ladder.loader() is a simple <img> loader for static-style sites that loads images one at time, but in tiers.
-
 
 It requires you to properly format the relevant <img> tags in the raw HTML, and call Ladder.loader() in JavaScript.
 
@@ -10,12 +10,11 @@ It requires you to properly format the relevant <img> tags in the raw HTML, and 
 
 <img class="first-tier" data-llsrc="/images/fullImage.jpg" src="/images/tempLoading.svg">
 
-
 	Here's a properly formated Ladder.loader() call:
 
 Window.onload = Ladder.loader(['first-tier','llsrc'],['second-tier','llsrc'],['third-tier','llsrc'])
 	
-More info at https://github.com/benjfriedrich/ladderLoader.js
+More info at https://ladderloader.dev
 
 (by @benjfriedrich)
 
