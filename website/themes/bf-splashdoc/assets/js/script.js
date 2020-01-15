@@ -1,41 +1,24 @@
 const elements = document.querySelectorAll('.anmld1');
 
-anime({
-  targets: elements,
+
+function startAnimation() {
+	
+	anime({
+  targets: document.querySelectorAll('.anmld1'),
   opacity: [
     { value: 0},
     { value: 1}
   ],
-  loop: true,
-  delay: anime.stagger(102)
+  delay: anime.stagger(101.5),
+  loop: true
+
 });
 
-
-
-
-
-// anime({
-//   targets: document.querySelectorAll('.anmld2'),
-//   opacity: 1,
-// });
-// const elements2 = document.querySelector('#_4');
-
-
-// anime({
-//   targets: elements2,
-//   opacity: [
-//     { value: 0},
-//     { value: 1}
-//   ],
-//   loop: true,
-
-//   delay: anime.stagger(200)
-// });
-
-
-
 var tl = anime.timeline({
-  loop: true,
+
+	loop: true
+
+
 });
 
 // Add children
@@ -66,4 +49,7 @@ tl
   duration: 540,
 })
 
+}
 
+
+startAnimation();
