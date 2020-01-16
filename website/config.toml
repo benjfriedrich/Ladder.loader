@@ -1,4 +1,8 @@
 baseURL = "https://ladderloader.dev/"
 languageCode = "en-us"
-title = "Ladder Loader"
+title = "Ladder.loader()"
 theme = "bf-splashdoc"
+
+[params]
+	description = "A JavaScript utility function for downloading images to the browser simply & quickly."
+	author = "Benjamin Friedrich"
